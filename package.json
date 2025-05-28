@@ -1,0 +1,38 @@
+{
+  "name": "restaurant-order-queue-system",
+  "version": "1.0.0",
+  "description": "Distributed task queue system for restaurant order processing using RabbitMQ",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "consumer": "node consumer.js",
+    "dev": "concurrently \"npm run start\" \"npm run consumer\"",
+    "setup": "npm install && echo 'Please ensure RabbitMQ is running on localhost:5672'",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "restaurant",
+    "orders",
+    "queue",
+    "rabbitmq",
+    "distributed",
+    "microservices",
+    "nodejs"
+  ],
+  "author": "Restaurant Queue System",
+  "license": "MIT",
+  "dependencies": {
+    "amqplib": "^0.10.3",
+    "axios": "^1.6.0",
+    "express": "^4.21.2",
+    "uuid": "^9.0.1",
+    "ws": "^8.14.2"
+  },
+  "devDependencies": {
+    "concurrently": "^8.2.2",
+    "nodemon": "^3.0.1"
+  },
+  "engines": {
+    "node": ">=14.0.0"
+  }
+}
